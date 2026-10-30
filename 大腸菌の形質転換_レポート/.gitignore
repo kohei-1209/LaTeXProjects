@@ -4,9 +4,7 @@
 *.log
 *.out
 *.synctex.gz
-*.pdf
-*.jpg
-*.png
+*_表紙.pdf
 *.docx
 *.xlsx
 *.pptx
