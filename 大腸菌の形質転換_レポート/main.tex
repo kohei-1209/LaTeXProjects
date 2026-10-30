@@ -1,0 +1,93 @@
+\documentclass[paper=a4, head_space=25mm, foot_space=25mm]{jlreq}
+
+\usepackage{pdfpages}
+\usepackage{amsmath}
+\usepackage{tabularx, array, booktabs, multirow, makecell}
+%tabularx : 表(セル)の幅を自動調節するパッケージ
+%array : tabularx環境において中央揃えを可能にするためのパッケージ
+%booktabs : 表の罫線の種類を追加するパッケージ
+%multirow : 表を縦に結合するパッケージ
+%makecell : 表のセル内で改行するためのパッケージ
+\usepackage{graphicx, float}
+%graphicx : 画像を挿入するためのパッケージ
+%float : 図を記述した位置通りに表示するためのパッケージ
+\usepackage[hyphens]{xurl}
+%xurl : URLを改行するためのパッケージ
+\usepackage[hidelinks]{hyperref}
+%hyperref : 目次や参考文献のリンクを有効にするためのパッケージ
+
+\newcolumntype{C}{>{\centering\arraybackslash}X}
+%新しい列タイプ"C"を追加 : 幅を自動調節する中央揃えの列
+
+\begin{document}
+    \section{目的}
+        本実験では、大腸菌からプラスミドを抽出し、そのプラスミドを、同じ複製起点のプラスミドをもつ大腸菌、及び異なる複製起点のプラスミドをもつ大腸菌に加え、形質転換体の数の計測を行った。また、抽出したプラスミドを制限消化し、電気泳動により未処理のプラスミドとの違いを確認した。本実験を通じて、微生物を取り扱う上での基本的な操作、及び形質転換の原理、不和合性、制限修飾系について学んだ。
+
+    \section{方法}
+        本節では、本実験で行った大腸菌の形質転換とプラスミドDNAの制限消化について、詳細な手順を述べる。
+
+        \subsection{大腸菌の形質転換}
+            本実験では、プラスミドpMWK1257を抽出、精製し、それをプラスミドpBR322またはpMW118を有するコンピテントセルに加え、形質転換させた。形質転換体をカナマイシンを含む培地で培養することで、異なるプラスミド同士の和合性、不和合性について調べた。
+
+            \subsubsection{プラスミドpMWK1257の抽出と精製 (1日目)}
+                \begin{enumerate}
+                    \item プラスミドpMWK1257を有する\textit{E.coli} DH5 $\alpha$株の一晩培養液 1 mLを1.5 mLマイクロチューブに移し、室温、10,000 rpmで1分間だけ遠心した。
+                    \item 上清を捨て、チューブに200 $\mu$Lの再懸濁バッファー mP1を加え、ボルテックスで懸濁した。
+                    \item チューブに200 $\mu$Lの溶解バッファー mP2を加え、10回ほどゆっくりと転倒混和し、室温で2分間だけ静置した。
+                    \item チューブに300 $\mu$Lの中和バッファー mP3を加え、10回ほど転倒混和した。
+                    \item チューブを13,000 rpmで5分間だけ遠心した。
+                    \item FastGene\texttrademark{} mPカラムを2 mLコレクションチューブにセットした。
+                    \item 手順5.で得られた上清をmPカラムに移し、13,000 rpmで1分間だけ遠心した。
+                    \item mPカラムを一度取り外し、2 mLコレクションチューブに入ったろ液を捨て、カラムをコレクションチューブに再びセットした。
+                    \item mPカラムに600 $\mu$Lの洗浄バッファー mP5を加え、13,000 rpmで1分間だけ遠心した。
+                    \item 同様にろ液を捨て、再び13,000 rpmで2分間だけ遠心した。
+                    \item カラムを新しい1.5 mLマイクロチューブにセットした。
+                    \item メンブレンの中央に50 $\mu$Lの溶出バッファー mP6を加え、2分間だけ静置した。
+                    \item チューブを13,00 rpmで2分間だけ遠心し、プラスミドを溶出させた。
+                    \item 溶出させたプラスミドが入ったチューブは2日目まで保存した。
+                \end{enumerate}
+
+            \subsubsection{プラスミドpBR322またはpMW118を有するコンピテントセルの作製 (1日目)}
+                \begin{enumerate}
+                    \item プラスミドpBR322またはpMW118を有する\textit{E.coli} DH5 $\alpha$株を2時間培養した。
+                    \item 各プラスミドを有する大腸菌の培養液を1.5 mLずつ別々の1.5 mLマイクロチューブに分注し、4 $^\circ$C、10,000 rpmで1分間だけ遠心した。
+                    \item 上清を捨て、菌体が入った各チューブに氷冷した0.1M $\mathrm{CaCl_2}$溶液を1 mLずつ加え、よく懸濁した。
+                    \item 各チューブを4 $^\circ$C、10,000 rpmで1分間だけ遠心した。
+                    \item 上清を捨て、各チューブに氷冷した10\% グリセリン含有 0.1M $\mathrm{CaCl_2}$溶液を100 $\mu$Lずつ加え、よく懸濁した。
+                    \item 各チューブを-80 $^\circ$Cで2日目まで保存した。
+                \end{enumerate}
+
+            \subsubsection{カナマイシン含有LB寒天培地の作製}
+                \begin{enumerate}
+                    \item 300 mL三角フラスコに、寒天 3.0 g、蒸留水 200 mL、LB培地粉末 4.0 gを加え、蓋をして121 $^\circ$Cで20分間オートクレーブ滅菌した。
+                    \item 滅菌後、フラスコを50 $^\circ$C程度まで冷まし、カナマイシン溶液 200 $\mu$Lを加えた。
+                    \item 2枚の滅菌シャーレに約20 mLずつ培地を注ぎ、室温で冷却して固めた。
+                    \item クリーンベンチの送風により培地表面を30分ほど乾燥させた。
+                \end{enumerate}
+
+            \subsubsection{コンピテントセルの形質転換と培養 (2日目\&3日目)}
+                \begin{enumerate}
+                    \item 
+                \end{enumerate}
+
+        \subsection{プラスミドDNAの制限消化}
+            本実験では、プラスミドpMWK1257をEcoRIによって制限消化した。未処理のプラスミドと制限消化済みのプラスミドを電気泳動して、それらの分子量を比較することで、制限酵素によるプラスミドの消化について調べた。
+
+            \subsubsection{EcoRIによるプラスミドpMWK1257の制限消化 (2日目)}
+
+            \subsubsection{アガロースゲルの作製}
+
+            \subsubsection{電気泳動用試料の調製 (2日目)}
+
+            \subsubsection{アガロースゲル電気泳動 (2日目 \& 3日目)}
+
+    \section{結果}
+
+    \section{考察}
+
+    \section{課題}
+
+    \begin{thebibliography}{9}
+        \bibitem{}
+    \end{thebibliography}
+\end{document}
