@@ -8,9 +8,10 @@
 %booktabs : 表の罫線の種類を追加するパッケージ
 %multirow : 表を縦に結合するパッケージ
 %makecell : 表のセル内で改行するためのパッケージ
-\usepackage{graphicx, float}
+\usepackage{graphicx, float, subcaption}
 %graphicx : 画像を挿入するためのパッケージ
 %float : 図を記述した位置通りに表示するためのパッケージ
+%subcation : 複数の画像を1つの図として並べて表示させるためのパッケージ
 \usepackage[hyphens]{xurl}
 %xurl : URLを改行するためのパッケージ
 \usepackage[hidelinks]{hyperref}
@@ -83,12 +84,65 @@
                     \item また、$\lambda$-Hind III分子量マーカー 4 $\mu$Lと色素混合液 2 $\mu$Lをパラフィルム上で混合した。
                     \item 手順1-3.で調製した溶液の全量をアガロースゲルの別々のレーンにロードした。
                     \item 100Vで30分間通電し、電気泳動を行なった。
-                    \item 電気泳動後、ゲルを取り出して、GelRed液に15分間浸して染色した。
+                    \item 電気泳動後、ゲルを取り出して、GelRed液に20分間浸して染色した。
                     \item 染色後、ゲルを紫外線イルミネーターで観察したところ、バンドが薄かったため、再度GelRed液で24時間染色した。
                     \item 染色後、ゲルを紫外線イルミネーターで観察した。
                 \end{enumerate}
 
     \section{結果}
+        本節では、形質転換体のコロニーの観察結果、およびプラスミドの電気泳動結果について述べる。
+        
+        \subsection{大腸菌形質転換体のコロニーの観察結果}
+            以下の図\ref{fig:形質転換体コロニー}に、2.1.3節において形質転換体を培養した培地の写真を示す。
+            
+            \begin{figure}
+                \centering
+                \begin{subfigure}{0.49\textwidth}
+                    \centering
+                    \includegraphics[width=\textwidth]{形質転換体コロニー_pBR322.jpg}
+                    \caption{pBR322}
+                    \label{fig:形質転換体コロニー_pBR322}
+                \end{subfigure}
+                \hfill
+                \begin{subfigure}{0.49\textwidth}
+                    \centering
+                    \includegraphics[width=\textwidth]{形質転換体コロニー_pMW118.jpg}
+                    \caption{pMW118}
+                    \label{fig:形質転換体コロニー_pMW118}
+                \end{subfigure}
+                \caption{大腸菌の形質転換体のカナマイシン含有LB寒天培地における培養結果. \\
+                (a) プラスミドpBR322を有する大腸菌にpMWK1257を加えて形質転換させた菌体の培養結果. \\
+                (b) プラスミドpMW118を有する大腸菌にpMWK1257を加えて形質転換させた菌体の培養結果.}
+                \label{fig:形質転換体コロニー}
+            \end{figure}
+
+            図\ref{fig:形質転換体コロニー_pBR322}より、プラスミドpBR322を有する大腸菌の形質転換体のコロニー数は404個であった。また図\ref{fig:形質転換体コロニー_pMW118}より、プラスミドpMW118を有する大腸菌の形質転換体のコロニー数は0個であった。
+
+        \subsection{プラスミドpMWK1257の電気泳動結果}
+            以下の図\ref{fig:電気泳動}に、2.2.2節において電気泳動したアガロースゲルの写真を示す。
+
+            \begin{figure}[H]
+                \centering
+                \begin{subfigure}{0.49\textwidth}
+                    \centering
+                    \includegraphics[width=\textwidth]{電気泳動_20min染色後.png}
+                    \caption{20分間染色後}
+                    \label{fig:電気泳動_20min染色後}
+                \end{subfigure}
+                \hfill
+                \begin{subfigure}{0.49\textwidth}
+                    \centering
+                    \includegraphics[width=\textwidth]{電気泳動_24h染色後.png}
+                    \caption{24時間染色後}
+                    \label{fig:電気泳動_24h染色後}
+                \end{subfigure}
+                \caption{大腸菌から抽出したプラスミドpMWK1257をEcoRIで制限消化したものと未処理のもので電気泳動し、ゲルを染色して紫外線イルミネーターで撮影したもの. \\
+                (a) ゲルを20分間染色し、紫外線イルミネーターで撮影したもの. \\
+                (b) ゲルをさらに24時間染色し、紫外線イルミネーターで撮影したもの.}
+                \label{fig:電気泳動}
+            \end{figure}
+
+
 
     \section{考察}
 
