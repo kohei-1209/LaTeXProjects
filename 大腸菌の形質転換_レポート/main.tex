@@ -1,4 +1,4 @@
-\documentclass[paper=a4, head_space=25mm, foot_space=25mm]{jlreq}
+\documentclass[paper=a4, head_space=20mm, foot_space=25mm]{jlreq}
 
 \usepackage{pdfpages}
 \usepackage{amsmath}
@@ -21,6 +21,9 @@
 %新しい列タイプ"C"を追加 : 幅を自動調節する中央揃えの列
 
 \begin{document}
+
+    \includepdf{大腸菌の形質転換_表紙.pdf}
+    
     \section{目的}
         本実験では、大腸菌からプラスミドを抽出し、そのプラスミドを、同じ複製起点のプラスミドをもつ大腸菌、及び異なる複製起点のプラスミドをもつ大腸菌に加え、形質転換体の数の計測を行った。また、抽出したプラスミドを制限消化し、電気泳動により未処理のプラスミドとの違いを確認した。本実験を通じて、微生物を取り扱う上での基本的な操作と法令、及び形質転換の原理、不和合性、制限修飾系について学んだ。
 
@@ -108,14 +111,14 @@
             
             \begin{figure}
                 \centering
-                \begin{subfigure}{0.49\textwidth}
+                \begin{subfigure}{0.48\textwidth}
                     \centering
                     \includegraphics[width=\textwidth]{形質転換体コロニー_pBR322.jpg}
                     \caption{pBR322}
                     \label{fig:pBR322}
                 \end{subfigure}
                 \hfill
-                \begin{subfigure}{0.49\textwidth}
+                \begin{subfigure}{0.48\textwidth}
                     \centering
                     \includegraphics[width=\textwidth]{形質転換体コロニー_pMW118.jpg}
                     \caption{pMW118}
@@ -168,14 +171,14 @@
 
             \begin{figure}[H]
                 \centering
-                \begin{subfigure}{0.49\textwidth}
+                \begin{subfigure}{0.48\textwidth}
                     \centering
                     \includegraphics[width=\textwidth]{電気泳動_20min染色後.png}
                     \caption{20分間染色後}
                     \label{fig:電気泳動_20min染色後}
                 \end{subfigure}
                 \hfill
-                \begin{subfigure}{0.49\textwidth}
+                \begin{subfigure}{0.48\textwidth}
                     \centering
                     \includegraphics[width=\textwidth]{電気泳動_24h染色後.png}
                     \caption{24時間染色後}
@@ -205,18 +208,74 @@
 
             これらのことを踏まえると、本実験において形質転換体のコロニー数に有意な差が生じた理由として以下の説明が考えられる。プラスミドpBR322を保有する大腸菌はカナマイシン耐性遺伝子をもつプラスミドpMWK1257と和合性を示し、その形質転換体は新たにカナマイシン耐性を獲得した。一方で、プラスミドpMW118を保有する大腸菌はpMWK1257と不和合性を示し、その形質転換体はカナマイシン耐性を獲得しなかった。その結果、カナマイシンを含む培地中で前者の細胞は生き残ったが、後者の細胞は死滅したと考えられる。
 
-        \subsection{未処理のプラスミドDNAと制限消化済みのプラスミドDNAのアガロースゲル電気泳動における移動度の違いについて}
-            
+        \vskip \baselineskip
 
+        \subsection{未処理のプラスミドDNAと制限消化済みのプラスミドDNAのアガロースゲル電気泳動における移動度の違いについて}
+
+        \vskip \baselineskip
+
+            3.2節で述べたように、未処理のプラスミドpMWk1257の方が、EcoRIで制限消化したプラスミドpMWK1257よりも、アガロースゲル電気泳動における移動度が大きかった。この理由として、未処理のプラスミドの方が、EcoRIで制限消化したプラスミドよりも、分子量が小さいからであるということは考えにくい。なぜなら、EcoRIはプラスミドのトポロジーを変化させる酵素であり\cite{EcoRI}、プラスミドに新たな分子を追加して分子量を増大させる酵素ではないからである。具体的には、EcoRIは閉環状プラスミドDNAを直鎖状プラスミドDNAに変化させる酵素である\cite{EcoRI}。
+
+            このことを踏まえると、電気泳動における移動度の違いは、分子量の違いではなく、プラスミドDNAの形状の違いによって生じたと考えられる。つまり、未処理のプラスミドには、よりコンパクトな閉環状のプラスミドが多く、ゲルを通過しやすいのに対して、EcoRIで制限消化したプラスミドには、直鎖状のプラスミドが多く、ゲルを通過しづらかったと考えられる。これは、前述のEcoRIの活性や本実験の結果とも矛盾しない。
+            
+            しかし、プラスミドDNAの分子量や、アガロースゲルの塩濃度によって、閉環状プラスミドと直鎖状プラスミドの移動度が逆転することがある\cite{EcoRI}。したがって、閉環状プラスミドはコンパクトだからゲル中を移動しやすく、直鎖状プラスミドは相対的に立体障害が大きく、ゲル中を移動しづらいという説明を、全てのプラスミドに対して一様に適用することはできないと考えられる。
+        
     \section{課題}
+        \begin{enumerate}
+            \item アガーロースゲル電気泳動において、制限酵素処理したものと未処理のプラスミドDNAの見かけの大きさが異なる理由を説明せよ。また、$\lambda$-HindⅢ分子量マーカーを基準としたとき、正しいサイズを示すのはどちらか。その理由も説明せよ。
+            
+            \vskip \baselineskip
+
+            アガロースゲル電気泳動において、未処理のプラスミドと制限酵素処理済みのプラスミドの移動度が異なる理由は、4.2節で説明した通り、未処理のプラスミドは閉環状の形状をしており、直鎖状の形状をしている制限酵素処理済みのプラスミドと比較して、コンパクトでゲル中を通過しやすいためである。
+
+            また、$\lambda$-HindⅢ分子量マーカーを基準としたときに正しいサイズを示すものは、制限酵素処理をしたプラスミドである。なぜなら、$\lambda$-HindⅢ分子量マーカーは$\lambda$ DNAをHindⅢ制限酵素で完全分解したものであり\cite{lambda-Hind3}、閉環状のプラスミドよりも制限酵素処理をした直鎖状のプラスミドの方が、マーカーのDNA断片の形状に近いからである。
+
+            \vskip \baselineskip
+
+            \item DNAを溶解、保存する溶液にはEDTAを入れることが推奨される。その理由を説明せよ。
+            
+            \vskip \baselineskip
+
+            DNAは生細胞から取り出した後、DNaseによる酵素反応、フリーラジカルによる酸化、加水分解、紫外線によって分解、損傷する\cite{EDTA}。このような分解、損傷反応のうち、DNaseの酵素反応による分解を防ぐために、試料を低温に保つことに加え、EDTAを加えることが推奨されている。なぜなら、DNaseは金属依存性の酵素であることが多く、EDTAが金属イオンと結合することで、DNaseが金属イオンと結合できずに不活性化するからである\cite{EDTA}。
+
+            \vskip \baselineskip
+
+            \item 大腸菌がカナマイシンに対して感受性を示す機構について説明せよ。また、今回用いたプラスミドにより、大腸菌にカナマイシン耐性が付与される機構について説明せよ。
+            
+            \vskip \baselineskip
+
+            カナマイシンなどのアミノグリコシド系抗生物質は正に帯電しており、細菌と接触すると外膜表面の負電荷に帯電したリポ多糖分子に結合する。外膜は、リポ多糖分子同士が2価陽イオンによって架橋されることで安定化されているが、これがアミノグリコシドに置き換えられることで外膜の構造が不安定化する。これによりアミノグリコシドの外膜透過性が増加し、薬剤が細胞内のペリプラズミック空間に侵入する。このプロセスはself-promoted uptakeとして知られる。その後、energy-dependent phase Iとして知られるプロセスによって、薬剤が細胞質内に侵入する。細胞内に侵入したアミノグリコシドは、30Sリボソームの16SリボソームRNA上のA部位に結合する。これにより、リボソームがtRNAのコドンを読み取るときの誤読を誘発し、誤ったポリペプチドが合成される。特に、誤翻訳された膜タンパク質が細胞膜に挿入されると、細胞膜の完全性が損傷し、さらに多くの薬剤が細胞内に取り込まれる。このプロセスはenergy-dependent phase Ⅱとして知られる。これらのプロセスを通して薬剤が細胞内に蓄積し、さらに多くの誤翻訳が起こることで細胞は死亡する。\cite{kan-resistance}, \cite{kanamycin}
+
+            本実験で用いたカナマイシン耐性遺伝子をもつプラスミドは、アミノグリコシドリン酸転移酵素(APH)をコードしている\cite{kan-resistance}。APHは、ATPのリン酸基をカナマイシンに転移させる酵素である。APHによってリン酸化されたカナマイシンは、リボソームへの結合ができなくなり、その結果カナマイシンは薬理作用を失う。\cite{APH}
+
+            \vskip \baselineskip
+
+            \item 大腸菌形質転換体のコロニー数の計測について、全員の平均値および標準偏差から、「不和合性を起こすプラスミドの組み合わせとそうでない組み合わせで、形質転換体のコロニー数に違いがある」かどうか解析せよ。また、得られた結果について考察せよ。
+            
+            \vskip \baselineskip
+
+            各形質転換体のコロニー数の全員の平均値、標準偏差は3.1節の表\ref{tab:形質転換体}に示した通りである。また、解析結果について、3.1節の式$(1)$-$(3)$で計算した通り、p値が0.000000であることから「各形質転換体ごとのコロニー数に違いは無い」とする帰無仮説は棄却された。この結果についての考察は4.1節で述べた通りである。
+        \end{enumerate}
 
     \begin{thebibliography}{9}
         \bibitem{t-test} Michael R Dohm. "10.2: Digging deeper into t-test plus the Welch test". LibreTexts\texttrademark \ STATISTICS, 2024. \url{https://stats.libretexts.org/Bookshelves/Applied_Statistics/Mikes_Biostatistics_Book_(Dohm)/10%3A_Quantitative_Two-Sample_Tests/10.2%3A_Digging_deeper_into_t-test_plus_the_Welch_test}, (閲覧 : 2026-11-1).
 
-        \bibitem{pBR322} ニッポンジーン. "pBR322 DNA". \url{https://www.nippongene.com/siyaku/product/dna-cloning/pbr322-dna/pbr322-dna.html}, (閲覧 : 2026-11-2).
+        \bibitem{pBR322} 株式会社ニッポンジーン. "pBR322 DNA". \url{https://www.nippongene.com/siyaku/product/dna-cloning/pbr322-dna/pbr322-dna.html}, (閲覧 : 2026-11-2).
 
-        \bibitem{pMW118} ニッポンジーン. "pMW118 DNA". \url{https://www.nippongene.com/siyaku/product/dna-cloning/pmw118-119-dna/pmw118-dna.html}, (閲覧 : 2026-11-2).
+        \bibitem{pMW118} 株式会社ニッポンジーン. "pMW118 DNA". \url{https://www.nippongene.com/siyaku/product/dna-cloning/pmw118-119-dna/pmw118-dna.html}, (閲覧 : 2026-11-2).
 
         \bibitem{pHN1257} Nobutaka Nakashima, Tomohiro Tamura. "Conditional gene silencing of multiple genes with antisense RNAs and generation of a mutator strain of \textit{Escherichia coli}". Nucleic Acids Research, 2009, Vol.37, No.15. \url{https://doi.org/10.1093/nar/gkp498}.
+
+        \bibitem{EcoRI} Susan Mickel, Vincent Arena,Jr., William Bauer. "Physical properties and gel electrophoresis behavior of R12-derived plasmid DNAs". Nucleic Acids Research, 1977, Vol.4, Issue 5, p.1465-1482. \url{https://doi.org/10.1093/nar/4.5.1465}.
+
+        \bibitem{lambda-Hind3} 株式会社ニッポンジーン. "Marker 1 ($\lambda$/HindⅢ digest)". \url{https://www.nippongene.com/siyaku/product/electrophoresis/tds/tds_marker-1.pdf}, (閲覧 : 2026-11-3).
+
+        \bibitem{EDTA} Tom Oosting, Elena Hilario, Maren Wellenreuther, Peter A. Ritchie. "DNA degradation in fish: Practical solutions and guidelines to improve DNA preservation for genomic research". Ecology and Evolution, 2020, Vol.10, Issue 16, p.8643-8651. \url{https://doi.org/10.1002/ece3.6558}.
+
+        \bibitem{kan-resistance} Maria S. Ramirez, Marcelo E. Tolmasky. "Aminoglycoside modifying enzymes". Drug Resistance Updates, 2010, Vol.13, Issue 6, p.151-171. \url{https://www.sciencedirect.com/science/article/pii/S1368764610000385#bbib0130}.
+
+        \bibitem{kanamycin} Kevin M Krause, Alisa W Serio, Timothy R Kane, Lynn E Connolly. "Aminoglycosides: An Overview". Cold Spring Harbor Perspectives in Medicine, 2016, Vol.6, (6). \url{https://pmc.ncbi.nlm.nih.gov/articles/PMC4888811/}.
+
+        \bibitem{APH} Gerard D. Wright, Paul R. Thompson. "Aminoglycoside phosphotransferases: proteins, structure, and mechanism". Frontiers in Bioscience, 1999, Vol.4, d9-21. \url{https://storage.imrpress.com/imr/journal/FBL/article/493627/1752771390340.pdf}.
     \end{thebibliography}
 \end{document}
